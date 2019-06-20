@@ -141,6 +141,7 @@ set /a win=%win%*%판돈%
 echo 상금은 %win%달러 입니다!
 echo ---------------------------------------------------------------------------------------
 set /a mymoney+=%win%
+pause>nul
 goto 슬롯머신끝
 
 :스트레이트
@@ -149,6 +150,7 @@ echo 스트레이트!
 set /a win=%c%*200
 set /a win=%win%*%판돈%
 echo 상금은 %win%달러입니다!
+pause>nul
 goto 슬롯머신끝
 
 :jackpot
@@ -161,6 +163,7 @@ if %x%==50 goto 루프끝
 goto 잭팟무한루프
 
 :루프끝
+pause>nul
 cls
 set win=7777777*%판돈%
 echo 잭팟입니다! 상금은 %win%달러입니다!
@@ -177,10 +180,11 @@ goto 슬롯머신끝
 :돈없음
 cls
 echo 돈이 없습니다! 당신은 이제 빈털터리입니다!
-puase
+pause>nul
 goto 나가기
 
 :나가기
 cls
 echo 안녕히 가십시오!
+pause>nul
 start http://blog.naver.com/awidesky
